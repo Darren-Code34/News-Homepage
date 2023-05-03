@@ -11,6 +11,7 @@
 body{
     padding: 20px 15px;
     font-family: 'Inter', sans-serif;
+    z-index: 1;
 }
 
 .header{
@@ -21,6 +22,11 @@ body{
 
 .logo{
     width: 45px;
+    cursor: pointer;
+}
+
+.menu{
+    display: block;
 }
 
 .hamburger-menu{
@@ -28,17 +34,45 @@ body{
 }
 
 .close-menu{
-    display: none;
+    display: block;
+    margin-left: auto;
+    margin-right: 15px;
+    margin-bottom: 80px;
 }
 
 .nav-menu{
     display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: solid 1px transparent;
+    width: 65%;
+    margin-left: auto;
+    margin-right: 0;
+    height: 500vw;
+    z-index: 2;
+    background: hsl(36, 100%, 99%);
+    padding-top: 30px;
+    padding-left: 30px;
+    box-shadow: -150px 0 0px rgba(68, 78, 103, 0.7 );
+}
+
+.nav-menu ul{
+    list-style-type: none;
+}
+
+.nav-menu ul li{
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-weight: 500;
 }
 
 .container{
     display: grid;
     gap: 50px;
     margin-bottom: 100px;
+    z-index: 1;
 }
 
 p{
@@ -50,6 +84,10 @@ p{
     width: 100%;
     aspect-ratio: 1 / 1;
     margin-bottom: 20px;
+}
+
+.banner-desktop{
+    display: none;
 }
 
 .about-title{
@@ -71,6 +109,12 @@ p{
     padding: 6px 20px;
     text-transform: uppercase;
     letter-spacing: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.more:hover{
+    background-color: hsl(240, 100%, 5%);
 }
 
 .news{
@@ -87,6 +131,11 @@ p{
     color: hsl(36, 100%, 99%);
     font-weight: 700;
     margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.news h3:hover{
+    color: hsl(35, 77%, 62%);
 }
 
 .news p{
@@ -124,6 +173,11 @@ hr{
     font-weight: 800;
     font-size: 16px;
     margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.title-article:hover{
+    color: hsl(5, 85%, 63%);
 }
 
 .article p{
@@ -132,3 +186,137 @@ hr{
     font-style: 14px;
 }
 
+/*desktop Design*/
+
+@media only screen and (min-width: 1000px) {
+    body{
+        padding: 70px 80px;
+        
+    }
+
+    .header{
+        margin-bottom: 50px;
+    }
+    
+    .menu, .close-menu{
+        display: none;
+    }
+    .nav-menu{
+        display: block;
+        position: absolute;
+        right: 80px;
+        height: auto;
+        box-shadow: 0 0 0;
+        background-color: transparent;
+        padding-top: 70px;
+    }
+
+    .nav-menu ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        color: hsl(236, 13%, 42%);
+    }
+
+    .nav-menu ul li{
+        cursor: pointer;
+        margin-right: 55px;
+    }
+
+    .nav-menu ul .cat{
+        margin-right: 0;
+    }
+
+    .nav-menu ul li:hover{
+        color: hsl(35, 77%, 62%);
+    }
+
+    .container{
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .about{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .banner-mobil{
+        display: none;
+    }
+
+    .banner-desktop{
+        display: block;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .text{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        gap: 20px;
+    }
+
+    .about-title{
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .description{
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .more{
+        grid-column: 2;
+        grid-row: 2;
+        width:150px;
+        height: 50px;
+    }
+
+    .news{
+        grid-column: 2;
+        grid-row: 1 ;
+    }
+
+    
+
+}
+
+@media only screen and (min-width: 1200px) {
+    .container{
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 0.5fr;
+    }
+    
+    .articles{
+        display: grid;
+        grid-column: 1 / span 2;
+        grid-row: 2;
+        grid-column: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .article1{
+        grid-column: 1;
+        width: 100%;
+    }
+    .article2{
+        grid-column: 2;
+        width: 100%;
+    }
+    .article3{
+        grid-column: 3;
+        width: 100%;
+    }
+
+    .img-articles{
+        width: 90px;
+        margin-bottom: 15px;
+    }
+
+    .article p{
+        margin-left: 10px;
+    }
+}

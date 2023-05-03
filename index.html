@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
   
   <title>Frontend Mentor | News homepage</title>
 
@@ -22,31 +23,36 @@
   <img class="logo" src="./assets/images/logo.svg" alt="the logo">
   <div class="menu">
     <img class="hamburger-menu" src="./assets/images/icon-menu.svg" alt="icon menu">
-    <img class="close-menu" src="./assets/images/icon-menu-close.svg" alt="icone close menu">
-    <nav class="nav-menu">
-      <ul>
-        <li>Home</li>
-        <li>New</li>
-        <li>Popular</li>
-        <li>Trending</li>
-        <li>Categories</li>
-      </ul>
-    </nav>
   </div>
   </header>
+
+  <nav class="nav-menu">
+    <img class="close-menu" src="./assets/images/icon-menu-close.svg" alt="icone close menu">
+    <ul>
+      <li>Home</li>
+      <li>New</li>
+      <li>Popular</li>
+      <li>Trending</li>
+      <li class="cat">Categories</li>
+    </ul>
+  </nav>
 
   <div class="container">
     <div class="about">
       <img class="banner-mobil" src="./assets/images/image-web-3-mobile.jpg" alt="image web 3">
+      <img class="banner-desktop" src="./assets/images/image-web-3-desktop.jpg" alt="image web 3">
 
-      <h2 class="about-title">The Bright Future of Web 3.0?</h2>
+      <div class="text">
+        <h2 class="about-title">The Bright Future of Web 3.0?</h2>
 
-      <p class="description">
-        We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-        But is it really fulfilling its promise?
-      </p>
+        <p class="description">
+          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+          But is it really fulfilling its promise?
+        </p>
+        <button class="more">Read more</button>
+      </div>
 
-      <button class="more">Read more</button>
+      
     </div>
 
     <div class="news">
@@ -64,7 +70,7 @@
       <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
     </div>
 
-    <div class="arcticles">
+    <div class="articles">
       <div class=" article article1">
         <img class="img-articles" src="./assets/images/image-retro-pcs.jpg" alt="Retro pc image">
         <h3 class="number">01</h3>
@@ -91,7 +97,7 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Darren MIBISSA</a>.
+    Coded by <a href="https://github.com/Darren-Code34/News-Homepage">Darren MIBISSA</a>.
   </div>
 </body>
 </html>
